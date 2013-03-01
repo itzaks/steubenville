@@ -14,8 +14,8 @@ exports.config =
       order:
         before: [
           # Backbone
-          'vendor/scripts/jquery-1.9.1.min.js',
-          'vendor/scripts/underscore-1.4.4.min.js',
+          'vendor/scripts/jquery-1.9.1.js',
+          'vendor/scripts/underscore-1.4.4.js',
           'vendor/scripts/backbone-0.9.10.js',
           # Auto-reload
           'vendor/scripts/auto-reload-brunch.js',
