@@ -1,4 +1,7 @@
 # Brunch with Jade, Stylus, and CoffeeScript + basic styles
+
+#![mm](http://25.media.tumblr.com/e4a938e8a3ae449f07551da942cf9ca8/tumblr_mijan7ff8O1qze9l7o1_500.jpg)
+
 This is a skeleton (boilerplate) for [Brunch](http://brunch.io)
 
 Requires Brunch 1.3+.
@@ -18,6 +21,3 @@ This is for personal flat html5 websites.
 ## Acknowledgments
 
 This repo was built upon [brunch chrunb](git://github.com/tUrG0n/brunch-chrunb.git).
-
-## License
-Nah..
