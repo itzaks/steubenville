@@ -14,24 +14,11 @@ exports.config =
       order:
         before: [
           # Backbone
-          'vendor/scripts/jquery-1.8.3.min.js',
-          'vendor/scripts/underscore-1.4.2.min.js',
-          'vendor/scripts/backbone-0.9.2.js',
+          'vendor/scripts/jquery-1.9.1.min.js',
+          'vendor/scripts/underscore-1.4.4.min.js',
+          'vendor/scripts/backbone-0.9.10.js',
           # Auto-reload
           'vendor/scripts/auto-reload-brunch.js',
-          # Twitter Bootstrap jquery plugins
-          'vendor/scripts/bootstrap/bootstrap-alert.js',
-          'vendor/scripts/bootstrap/bootstrap-button.js',
-          'vendor/scripts/bootstrap/bootstrap-carousel.js',
-          'vendor/scripts/bootstrap/bootstrap-collapse.js',
-          'vendor/scripts/bootstrap/bootstrap-dropdown.js',
-          'vendor/scripts/bootstrap/bootstrap-modal.js',
-          'vendor/scripts/bootstrap/bootstrap-tooltip.js',
-          'vendor/scripts/bootstrap/bootstrap-popover.js',
-          'vendor/scripts/bootstrap/bootstrap-scrollspy.js',
-          'vendor/scripts/bootstrap/bootstrap-tab.js',
-          'vendor/scripts/bootstrap/bootstrap-transition.js',
-          'vendor/scripts/bootstrap/bootstrap-typeahed.js'
         ]
         after: [
         ]
