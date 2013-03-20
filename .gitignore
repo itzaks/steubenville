@@ -21,6 +21,7 @@ nbproject
 Thumbs.db
 
 # Project specific
+public/*
 npm-debug.log
 node_modules/
 tmp/

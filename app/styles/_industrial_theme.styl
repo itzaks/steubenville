@@ -1,8 +1,9 @@
 color-white = #F5F2ED
 color-black = #181030
 color-gray = #CECECE
+font-big = 2em
 
-font-body = 'Crimson Text', "Georgia", "Times", "Times New Roman", serif, sans-serif
+font-body = "Cambria", "Hoefler Text", Georgia, "Times New Roman", serif
 
 body
   font: 18px/1.4 font-body
@@ -10,13 +11,29 @@ body
   color: color-black
 
 h1, h2, h3
-  font-weight: 700
-  font-size: 2em
-  text-align: center
   margin-bottom: 0.5em
+  
+h1
+  font-size: font-big
+  
+h2
+  font-size: (font-big/1.5)
+  
+h3 
+  font-size: (font-big/1.75)
+
+h1, h2, h3, h4, h5, h6, b, strong, mark
+  font-weight: bold
 
 p
   margin-bottom: 0.5em
+  
+ui()
+  text-transform: uppercase
+  font-family: Arial
+  font-weight: bold
+  letter-spacing: 1px
+  cursor: pointer
 
 input,
 button
@@ -25,7 +42,7 @@ button
   
 input
   border: 0.2em solid color-gray
-  padding: 0.2em 0.4em
+  padding: 0.4em
   transition: border 1s ease-out
   background: color-white
   color: lighten(color-black, 10%)
@@ -42,30 +59,28 @@ input
 
 button,
 .button
+  ui()
   padding: 0.5em 0.6em 0.4em
   background: color-black
   color: color-white
-  border: 0
-  text-transform: uppercase
-  font-family: Arial
-  letter-spacing: 1px
-  font-size: 0.9em
-  cursor: pointer
+  border: 0.25em solid color-black
   position: relative
   
   &:hover
-    background-color: lighten(color-black, 10%)
+    background-color: invert(color-black)
+    color: invert(color-white)
     
   &:active
     top: 1px
-    background-color: lighten(color-black, 20%)
     
 label
-  display: block   
-  
-.hero
-  font-size: 1.1em
-  margin-bottom: 0.3em
+  ui()
+  display: block 
 
-.center-text
-  text-align: center
+header
+  ui()
+  border-bottom: 0.5em solid color-black
+  margin-bottom: 1em
+  
+  .title
+    margin-bottom: 0
