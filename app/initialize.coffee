@@ -3,23 +3,25 @@ class Application
   routers: {}
   events: {}
   constructor: ->
-    @Layout = require 'views/layout'
-    @Index = require 'views/index'
-    @Router = require 'lib/router'
+    _.extend this, Backbone.Events
+
+    @api = new API = require 'lib/api'
+    @router = new Router = require 'lib/router'
 
   init: ->
-    @add_views()
-    @add_routers()
+    @chrome()
+    @player = new Player = require 'views/player'
 
-  add_routers: ->
-    @routers.main = new @Router()
 
-  add_views: ->
-    @views.layout = new @Layout(el: $("#application"))
-    @views.index = new @Index()
+  chrome: ->
+    LayoutView = require 'views/layout'
+    @layout = new LayoutView
+      el: $("#application")
 
 $ ->
   app.init()
-  Backbone.history.start(pushState: yes)
+  Backbone.history.start
+    pushState: yes
+    root: root
 
 @app = new Application
