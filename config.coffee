@@ -1,9 +1,13 @@
+settings = require('./app/settings')
 exports.config =
 
   # See http://brunch.readthedocs.org/en/latest/config.html for documentation.
   paths:
     public: 'public'
-  plugins: 
+  plugins:
+    jade:
+      locals: settings.locals
+
     static_jade:
       extension: ".static.jade"  
   files:
