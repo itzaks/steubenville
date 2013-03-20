@@ -73,7 +73,9 @@ module.exports = class View extends Backbone.View
     @trigger "#{@cid}:initialize", @
 
   getRenderData: ->
-    @model?.toJSON()
+    renderData = @model?.toJSON() or {}
+    renderData.app = app
+    return renderData
 
   render: ->
     @trigger "#{@cid}:render:before", @
