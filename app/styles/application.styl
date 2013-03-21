@@ -71,7 +71,7 @@ button,
   margin: 0 auto
   height: 100%
   box-sizing: border-box
-  padding: 2em 1em
+  padding: 2em
   transition: all 300ms
   opacity: 0
   
@@ -110,7 +110,9 @@ footer
       
       &:first-child
         text-indent: 0
-    
+
+.right
+  float: right
 .page
   position: relative
   top: 0
@@ -166,5 +168,34 @@ footer
       top: 0
       transition: all 600ms ease-out
     
+@media screen and (max-width: 960px)
+  h1
+    font-size: 1.6em
     
+    span
+      display: block
+      
+  .page.index
+    position: static
+    height: auto
+  
+  #content
+    margin-bottom: 50px
+    height: auto
+    
+  .tweet
+    font-size: 1.6em
+
+  footer 
+    padding: 0
+    position: relative
+    height: 100px
+    
+    
+    li
+      display: block
+    
+  .right
+    margin-top: 1em
+    float: none
     

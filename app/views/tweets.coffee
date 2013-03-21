@@ -42,9 +42,10 @@ module.exports = class Tweets extends View
       .html("<div>#{ text }</div>")
 
     $fit = @$tweet.find("div")
+    height = if $(window).width() > 960 then $(window).height() - 350 else 300
     $fit.css
       width: "100%"
-      height: $(window).height() - 300
+      height: height
 
     $fit.textFit
       alignVert: true
