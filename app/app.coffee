@@ -6,10 +6,32 @@ module.exports = class Application
   views: {}
   routers: {}
   events: {}
+  tweets: []
   constructor: ->
     _.extend this, Backbone.Events
 
     @router = new Router = require 'lib/router'
+    @grabTweets()
+
+  grabTweets: ->
+    user = 's_reps'
+
+    $.ajax
+      type: 'GET'
+      dataType: 'jsonp'
+      url: 'http://api.twitter.com/1/statuses/user_timeline.json'
+      data: 
+        screen_name: 's_reps'
+        include_rts: 1
+
+      success: (data) =>
+        console.log data
+        tweet = data[0].text
+        
+        for tweet in data
+          @tweets.push tweet
+
+        @trigger "got-tweets"
 
   init: ->
     @chrome()

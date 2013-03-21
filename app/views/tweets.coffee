@@ -13,14 +13,24 @@ module.exports = class Tweets extends View
   current: 0
 
   bootstrap: ->
+    showFirstTweet = _.once @showTweet
+
+    @listenTo app, "got-tweets", ->
+      @showTweet()
+      
     @on "#{@cid}:render:after", ->
       @$tweet = @$(".tweet")
-      @grabTweets()
+      setTimeout =>
+        @showTweet()
+      , 150
 
   showTweet: ->
-    tweet = @tweets[@current % @tweets.length]
+    return if app.tweets.length is 0
+
+    tweet = app.tweets[@current % app.tweets.length]
     
-    name = tweet.retweeted_status.user.screen_name
+    name = tweet.retweeted_status.user.name
+    username = tweet.retweeted_status.user.screen_name
     image = tweet.retweeted_status.user.profile_image_url
     text = tweet.retweeted_status.text
     mentionURL = "https://twitter.com/intent/tweet?text=It's%20not%20who%20you%20love%20%E2%80%93%20it's%20*that*%20you%20love%20that%20truly%20matters&in_reply_to=#{ tweet.retweeted_status.id_str }"
@@ -45,6 +55,7 @@ module.exports = class Tweets extends View
     , 100
 
     @$(".name").text(name)
+    @$(".username").text(" @#{ username }").attr("href", "http://twitter.com/#{ username }")
     #@$(".tweeter_info").hide().fadeIn()
     @$(".respond").attr("href", mentionURL)
     #@$(".profile_image").attr("src", image)
@@ -57,23 +68,3 @@ module.exports = class Tweets extends View
   ready: ->
     @$el.addClass("ready")
     @isReady = true
-
-  grabTweets: ->
-    user = 's_reps'
-
-    $.ajax
-      type: 'GET'
-      dataType: 'jsonp'
-      url: 'http://api.twitter.com/1/statuses/user_timeline.json'
-      data: 
-        screen_name: 's_reps'
-        include_rts: 1
-
-      success: (data) =>
-        console.log data
-        tweet = data[0].text
-        
-        for tweet in data
-          @tweets.push tweet
-    
-        @showTweet()
