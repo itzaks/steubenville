@@ -1,23 +1,14 @@
-# Brunch with Jade, Stylus, and CoffeeScript + basic styles
+# Steubenville Replies
 
-#![mm](http://25.media.tumblr.com/e4a938e8a3ae449f07551da942cf9ca8/tumblr_mijan7ff8O1qze9l7o1_500.jpg)
+August 11–12, 2012, a young girl in Steubenville, Ohio was raped.
 
-This is a skeleton (boilerplate) for [Brunch](http://brunch.io)
+On March 17, 2013, two young men were convicted for the horrible crime. As this blog post details, CNN took charge in "publicly worry[ing] about the 'promising future' of the convicted rapists", not giving the victim much thought at all.
 
-Requires Brunch 1.3+.
+But it was not – is not – limited to mainstream media. This sort of behaviour thrives on Twitter. And is often unchallenged. Until now. We've gathered and will continue to gather atrocious tweets that deserve to be replied to; to be challenged – to show that we are many that will not tolerate this kind of behaviour, or the culture that supports it.
 
-This is for personal flat html5 websites. 
+---
 
-## Getting started
-* Create new project with `brunch new <project name> -s git@github.com:vastness/brunch-with-avocados.git`.
-* Build the project with `brunch b` or `brunch w`.
-* Run tests with `brunch t`
+###Technology
+Created upon [brunch](www.brunch.io) with backbone as foundation. Grab it, clone the repo and do `brunch watch --server` to give it a go.
 
-## Features
-* Templating with [Jade](http://jade-lang.com) + Jade static (`app/index.jade` -> `public/index.html`)
-* [CoffeeScript](http://coffeescript.org)
-* [Backbone 0.9.10](http://backbonejs.org) for client-side MVC and routing
-
-## Acknowledgments
-
-This repo was built upon [brunch chrunb](git://github.com/tUrG0n/brunch-chrunb.git).
+Based on earlier campaign [Hate Tweets To Frank Ocean](http://www.hatetweetstofrankocean.com/)'s concept and tech.
