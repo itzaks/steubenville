@@ -31,9 +31,7 @@ module.exports = class Tweets extends View
     
     name = tweet.retweeted_status.user.name
     username = tweet.retweeted_status.user.screen_name
-    image = tweet.retweeted_status.user.profile_image_url
     text = tweet.retweeted_status.text
-    mentionURL = "https://twitter.com/intent/tweet?text=It's%20not%20who%20you%20love%20%E2%80%93%20it's%20*that*%20you%20love%20that%20truly%20matters&in_reply_to=#{ tweet.retweeted_status.id_str }"
 
     copy = "I think you should read this article – http://www.newstatesman.com/laurie-penny/2013/03/steubenville-rape-cultures-abu-ghraib-moment"
 
@@ -61,10 +59,7 @@ module.exports = class Tweets extends View
 
     @$(".name").text(name)
     @$(".username").text(" @#{ username }").attr("href", "http://twitter.com/#{ username }")
-    #@$(".tweeter_info").hide().fadeIn()
     @$(".respond").attr("href", mentionURL)
-    #@$(".profile_image").attr("src", image)
-    #@$(".tweet_url").attr("href", tweetURL)
 
     @ready() unless @isReady
 

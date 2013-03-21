@@ -10,7 +10,6 @@ module.exports = class Application
   constructor: ->
     _.extend this, Backbone.Events
 
-    @router = new Router = require 'lib/router'
     @grabTweets()
 
   grabTweets: ->
