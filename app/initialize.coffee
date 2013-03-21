@@ -3,7 +3,7 @@ Application = require "./app"
 $ ->
   app.init()
 
-  root = if location.href.indexOf('localhost') isnt -1 then '' else app.name
+  root = if location.href.indexOf('localhost') isnt -1 then '' else app.root
   
   Backbone.history.start
     pushState: yes

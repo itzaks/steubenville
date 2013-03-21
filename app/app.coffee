@@ -1,7 +1,8 @@
 LayoutView = require 'views/layout'
 
 module.exports = class Application
-  name: "brunch-with-avocadoes"
+  name: "streubenville"
+  root: "streubenville"
   views: {}
   routers: {}
   events: {}
