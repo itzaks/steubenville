@@ -3,12 +3,13 @@ View = require('./view')
 module.exports = class Index extends View
   template: require('./templates/index')
   parts: {}
+  className: "page index"
   events: 
-  	"submit form": "holla"
+  	"click": "gotoTweets"
 
-  holla: (e) ->
+  gotoTweets: (e) ->
   	e.preventDefault()
   	
-  	alert "hey !#{ @$('.write-something').val() }¡"
+  	app.router.navigate "tweets", {trigger: true}
 
   #on dom ready
