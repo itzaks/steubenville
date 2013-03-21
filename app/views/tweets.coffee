@@ -35,6 +35,10 @@ module.exports = class Tweets extends View
     text = tweet.retweeted_status.text
     mentionURL = "https://twitter.com/intent/tweet?text=It's%20not%20who%20you%20love%20%E2%80%93%20it's%20*that*%20you%20love%20that%20truly%20matters&in_reply_to=#{ tweet.retweeted_status.id_str }"
 
+    copy = "I think you should read this article – http://www.newstatesman.com/laurie-penny/2013/03/steubenville-rape-cultures-abu-ghraib-moment"
+
+    mentionURL = "https://twitter.com/intent/tweet?text=#{ escape(copy) }&in_reply_to=#{ tweet.retweeted_status.id_str }"
+
     tweetURL = "https://twitter.com/#{ name }/status/#{ tweet.retweeted_status.id_str }"
         
     @$tweet
