@@ -19,9 +19,6 @@ html
     title=app.name
     link(rel='stylesheet', href='stylesheets/app.css')
     link(rel='stylesheet', href='stylesheets/vendor.css')
-    link(rel="stylesheet", href="//f.fontdeck.com/s/css/Uf28uh55+ApRRbdMqWM/5y2U+0o/DOMAIN_NAME/31058.css", type="text/css")
-
-
     script
       window.brunch = window.brunch || {};
       window.brunch['auto-reload'] = {enabled: true};
@@ -43,4 +40,19 @@ html
       a.gray(href='#') Read more about something
       a.gray(href='#') Read more about something
       a.gray(href='#') Read more about something
+
+    
+    script
+      WebFontConfig = { fontdeck: { id: '31058' } };
+
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+        '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+      
 
