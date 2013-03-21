@@ -12,7 +12,6 @@ module.exports = class Application extends View
       
       @current?.$el.addClass "slide-away"
 
-
       setTimeout =>
         @$page.html view.render().el
         @current = view
@@ -23,6 +22,7 @@ module.exports = class Application extends View
 
   start: ->
     @$el.addClass "ready"
+    @started = true
 
   #on dom ready
   initialize: (options) ->

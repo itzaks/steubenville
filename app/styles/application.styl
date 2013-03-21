@@ -58,6 +58,7 @@ button,
   border-color: color-accent
   color: color-accent
   display: inline-block
+  text-transform: none
   
   &:hover
     background: color-black
@@ -80,14 +81,16 @@ button,
   //border: 1em solid color-white
   
 footer
-  absolute: left 0 right 0
+  fixed: left 0 right 0
   bottom: 0
-  padding-bottom: 0.2em
-  text-align: center
+  padding: 1em
   
-  a
+  li
     margin: 0 0.2em
     display: inline-block
+    
+    a
+      color: inherit
   
 #content
   width: 100%
@@ -111,14 +114,20 @@ footer
 .page
   position: relative
   top: 0
-  transition: top 300ms ease-out
+  transition: top 300ms cubic-bezier(0.680, -0.550, 0.265, 1.550)
   height: 100%
   
   &.slide-away
-    top: -100%
+    top: -1000px !important
     
   &.index
     cursor: pointer
+    
+    position: absolute
+    height: 540px
+    top: 0
+    bottom: 50px
+    margin: auto
     
 .screenreader
   visibility: hidden
@@ -134,8 +143,6 @@ footer
   transition: opacity 500ms
   
   .action
-    letter-spacing: 0.1em
-    opacity: 0.5
     
   .respond
     margin-top: 0.5em
