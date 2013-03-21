@@ -10,6 +10,6 @@ module.exports = class Index extends View
   gotoTweets: (e) ->
   	e.preventDefault()
   	
-  	app.router.navigate "tweets", {trigger: true}
+  	app.trigger "page:render", "tweets"
 
   #on dom ready

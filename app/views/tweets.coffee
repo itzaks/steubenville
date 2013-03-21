@@ -46,7 +46,7 @@ module.exports = class Tweets extends View
 
     @$(".name").text(name)
     #@$(".tweeter_info").hide().fadeIn()
-    #@$(".respond").attr("href", mentionURL)
+    @$(".respond").attr("href", mentionURL)
     #@$(".profile_image").attr("src", image)
     #@$(".tweet_url").attr("href", tweetURL)
 
