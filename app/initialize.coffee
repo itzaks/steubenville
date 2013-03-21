@@ -9,4 +9,6 @@ $ ->
     pushState: yes
     root: root
 
+  app.router.navigate("/", {trigger:true})
+
 @app = new Application
