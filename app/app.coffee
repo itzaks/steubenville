@@ -24,7 +24,6 @@ module.exports = class Application
         include_rts: 1
 
       success: (data) =>
-        console.log data
         tweet = data[0].text
         
         for tweet in data

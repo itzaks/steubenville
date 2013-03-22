@@ -28,5 +28,3 @@ module.exports = class Application extends View
   initialize: (options) ->
     @setElement options.el
     super()
-
-    console.log @parts
