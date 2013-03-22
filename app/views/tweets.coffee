@@ -35,7 +35,7 @@ module.exports = class Tweets extends View
 
     copy = "I think you should read this article – http://www.newstatesman.com/laurie-penny/2013/03/steubenville-rape-cultures-abu-ghraib-moment"
 
-    mentionURL = "https://twitter.com/intent/tweet?text=#{ escape(copy) }&in_reply_to=#{ tweet.retweeted_status.id_str }"
+    mentionURL = "https://twitter.com/intent/tweet?text=#{ encodeURI(copy) }&in_reply_to=#{ tweet.retweeted_status.id_str }"
 
     tweetURL = "https://twitter.com/#{ name }/status/#{ tweet.retweeted_status.id_str }"
         
