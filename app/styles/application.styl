@@ -4,6 +4,7 @@ global-reset()
 color-white = #FFFBF5
 color-black = #0A0A0C
 color-accent = #fcff00
+color-gray = rgb(111,111,111)
 
 font-big = 2em
 font-body = "Siri Core Regular", 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, Verdana, sans-serif
@@ -35,7 +36,7 @@ a
   text-align: center
   
 .gray
-  color: #313131
+  color: color-gray
 
 em
   font-style: italic
@@ -101,9 +102,9 @@ footer
   
   article
     width: 100%
-    max-width: 550px
+    max-width: 410px
+    text-align: left
     margin: 0 auto
-    text-align: justify
     
     p
       margin-bottom: 0
@@ -114,6 +115,7 @@ footer
 
 .right
   float: right
+  
 .page
   position: relative
   top: 0
@@ -125,14 +127,19 @@ footer
     
   &.index
     cursor: pointer
-    
     position: absolute
-    height: 540px
+    height: 650px
     top: 0
     bottom: 50px
     margin: auto
     left: 0 
     right: 0
+    
+    p a
+      color: color-gray
+      
+      &:hover
+        color: color-white
     
 .screenreader
   visibility: hidden
