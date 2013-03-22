@@ -5,11 +5,12 @@ module.exports = class Index extends View
   parts: {}
   className: "page index"
   events: 
-  	"click": "gotoTweets"
+    "click": "gotoTweets"
 
   gotoTweets: (e) ->
-  	e.preventDefault()
-  	
-  	app.trigger "page:render", "tweets"
+    return if $(e.target).attr("href") isnt undefined
+    
+    e.preventDefault()
+    app.trigger "page:render", "tweets"
 
   #on dom ready
