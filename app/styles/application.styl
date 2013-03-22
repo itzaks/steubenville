@@ -132,18 +132,25 @@ footer
   &.index
     cursor: pointer
     position: absolute
-    height: 650px
+    height: 720px
     top: 0
     bottom: 50px
     margin: auto
     left: 0 
     right: 0
     
+    button
+      font-size: 1.2em
+      margin-top: 1em
+      display: block
+      width: 100%
+    
     p a
-      color: color-gray
+      color: color-white
+      text-decoration: underline
       
       &:hover
-        color: color-white
+        color: color-accent
     
 .screenreader
   visibility: hidden
@@ -183,8 +190,14 @@ footer
       transition: all 600ms ease-out
     
 @media screen and (max-width: 1500px)
+  h1
+    font-size: 3.5em
+    
   body
     font-size: 16px
+    
+  .page.index
+    height: 600px
     
 @media screen and (max-width: 960px)
   h1
