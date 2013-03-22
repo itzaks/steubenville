@@ -19,6 +19,18 @@ html
     script
       window.brunch = window.brunch || {};
       window.brunch['auto-reload'] = {enabled: true};
+      
+      WebFontConfig = { fontdeck: { id: '31058' } };
+
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+        '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
 
     script(src='javascripts/vendor.js')
     script(src='javascripts/app.js')
@@ -40,18 +52,4 @@ html
         li.right Fonts by 
           a(href='http://lettersfromsweden.se', target='_blank') Letters from Sweden
 
-    
-    script
-      WebFontConfig = { fontdeck: { id: '31058' } };
-
-      (function() {
-        var wf = document.createElement('script');
-        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-        '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-        wf.type = 'text/javascript';
-        wf.async = 'true';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(wf, s);
-      })();
-      
 
