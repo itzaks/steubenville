@@ -41,6 +41,8 @@ module.exports = class Tweets extends View
     mentionURL = "https://twitter.com/intent/tweet?text=#{ encodeURI(copy) }&in_reply_to=#{ tweet.retweeted_status.id_str }"
 
     tweetURL = "https://twitter.com/#{ name }/status/#{ tweet.retweeted_status.id_str }"
+
+    text.replace('"', '”')
         
     @$tweet
       .removeClass("show")
