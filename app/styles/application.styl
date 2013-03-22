@@ -43,7 +43,7 @@ em
       
 h1 
   text-align: center
-  margin: 20px 0 40px
+  margin: 0.5em 0 0.5em
   font-size: 4em
   font-family:"Siri Core Bold", 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, Verdana, sans-serif; font-weight:bold; font-style:normal;
   
@@ -182,7 +182,7 @@ footer
     transition: all 0
     top: -5px
     position: relative
-    
+    cursor: pointer
     
     &.show
       opacity: 1
@@ -228,5 +228,22 @@ footer
     
   .right
     margin-top: 1em
-    float: none
+    float: none 
     
+@media screen and (max-width: 640px)
+  body
+    font-size: 14px
+
+  h1
+    font-size: 1.5em
+    margin-top: 0
+    
+  .action
+    font-size: 0.8em
+    
+  button,.button
+    font-size: 1.2em
+  
+  .page.index button
+    font-size: 1em
+    padding-bottom: 0.5em

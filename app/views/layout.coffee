@@ -24,6 +24,8 @@ module.exports = class Application extends View
     @$el.addClass "ready"
     @started = true
 
+    window.scrollTo(0, 1)
+
   #on dom ready
   initialize: (options) ->
     @setElement options.el

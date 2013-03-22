@@ -6,7 +6,9 @@ module.exports = class Tweets extends View
   id: "tweets"
   className: "page"
 
-  events: "click .more": "showTweet"
+  events: 
+    "click .more": "showTweet"
+    "click .tweet": "showTweet"
 
   isReady: false
   tweets: []
@@ -22,6 +24,7 @@ module.exports = class Tweets extends View
       @$tweet = @$(".tweet")
       setTimeout =>
         @showTweet()
+        window.scrollTo(0, 1)
       , 150
 
   showTweet: ->
@@ -45,7 +48,7 @@ module.exports = class Tweets extends View
 
     $fit = @$tweet.find("div")
 
-    height = if $(window).width() > 960 then $(window).height() - 350 else 300
+    height = if $(window).width() > 960 then $(window).height() - 350 else 240
     
     $fit.css
       width: "100%"
